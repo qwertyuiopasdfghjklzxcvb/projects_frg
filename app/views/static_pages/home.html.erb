@@ -1,7 +1,11 @@
 <%= provide(:title, 'Home')%>
 
-<h1>Projects</h1>
-<p>Here you will be able to find all the projects. This is the home page for the <a href="http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group">FRG</a> Project application</p>
+<div class="center hero-unit">
+  <h1>Welcome to the Projects Home Page</h1>
+  <%= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary" %>
+  <p>Here you will be able to find all the projects that have been assigned to me. To know more about me visit <%= link_to "About", about_path %>. Please click here for home page of <%= link_to "FRG", 'http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group'%>, where you will be able to find all the other projects including mine.</p>
+</div>
+<%= link_to image_tag("frg.png", alt:"FRG"), 'http://www.it.iitb.ac.in/frg/wiki/index.php/Fundamental_Research_Group' %>
 
 
 
