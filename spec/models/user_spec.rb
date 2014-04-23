@@ -36,7 +36,7 @@ describe User do
       addresses = %w[user@foo,com user_at_foo.org example.user@foo. foobar@bar_baz.com foo@bar+baz.com]
       addresses.each do |invalid_address|
         @user.email = invalid_address
-        expect(@user).to be_valid
+        expect(@user).not_to be_valid
       end
     end
   end
@@ -91,7 +91,7 @@ describe User do
 
   describe "with a password that's too short" do
     before { @user.password = @user.password_confirmation = "a"*5 }
-    it { should be_valid }
+    it { should be_invalid }
   end
 
 end
